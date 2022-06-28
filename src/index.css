@@ -1,13 +1,129 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: #eaeaea;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.noteApp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+}
+.appTitle {
+  color: #9d9d9d;
+  margin-bottom: 20px;
+  font-size: 25px;
+  text-align: center;
+}
+.noteAppSearch {
+  padding: 5px 15px;
+  width: 200px;
+  border: 2px solid #d7d7d7;
+  outline: none;
+  border-radius: 20px;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.noteAppSearch::placeholder {
+  color: #8c8c8c;
+}
+.noteAreaContainer {
+  background-color: white;
+  border: 2px solid #d7d7d7;
+}
+.noteArea {
+  resize: none;
+  width: 600px;
+  height: 170px;
+  outline: none;
+  border: none;
+  padding: 20px;
+}
+.noteArea::placeholder {
+  color: #8c8c8c;
+}
+.colorArea {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.colorPicker {
+  display: flex;
+  gap: 20px;
+}
+
+.customRadioButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.customRadioButton .checkmark {
+  height: 10px;
+  border-radius: 100%;
+  width: 10px;
+  display: none;
+  background-color: white;
+}
+
+.customRadioButton input {
+  display: none;
+}
+.customRadioButton input:checked + .checkmark {
+  display: inline-block;
+}
+#pink {
+  background-color: #f06291;
+}
+#purple {
+  background-color: #ba68c8;
+}
+#yellow {
+  background-color: #fed54e;
+}
+
+#blue {
+  background-color: #50c2f7;
+}
+#green {
+  background-color: #aed580;
+}
+.addNote {
+  padding: 5px 45px;
+  border-radius: 50px;
+  border: none;
+  background-color: #44c766;
+  color: white;
+  cursor: pointer;
+}
+
+.noteCardContainer {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 3%;
+}
+.noteCard {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+.nCard {
+  width: 70%;
+  padding: 20px;
+}
+.nCard > h3 {
+  text-align: center;
 }
